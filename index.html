@@ -1,1 +1,115 @@
 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f9edf2">
+<title>GLOWY | MY NEW ERA</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#fff9fc;color:#493744;font-family:Arial,sans-serif}
+header{padding:30px 22px;background:linear-gradient(135deg,#f6dce8,#fdf1f5);border-radius:0 0 30px 30px}
+.logo{font-size:35px;letter-spacing:5px;font-weight:bold;color:#9b6682}
+.tag{font-size:12px;letter-spacing:2px;color:#866477}
+h1{font-size:23px;margin:28px 0 8px}
+p{line-height:1.7}
+main{padding:20px}
+.welcome{background:white;border-radius:20px;padding:18px;margin-bottom:22px;box-shadow:0 4px 18px #e9dce455}
+h2{font-size:19px;margin:22px 0 14px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.card{background:white;border:1px solid #f0e2e9;border-radius:19px;padding:18px 12px;min-height:125px;text-align:center;cursor:pointer}
+.card:active{background:#faedf3}
+.emoji{font-size:28px}
+.card h3{font-size:15px;margin:10px 0 5px}
+.card p{font-size:12px;color:#987e8e;margin:0}
+.section{display:none;background:white;padding:20px;border-radius:20px;margin-top:18px}
+.section.active{display:block}
+.back{border:0;background:#f6e5ed;color:#79546a;border-radius:12px;padding:10px 18px}
+nav{position:sticky;bottom:0;background:white;border-top:1px solid #f0e2e9;display:flex;justify-content:space-around;padding:13px 5px}
+nav button{background:none;border:0;color:#866477;font-size:12px}
+footer{text-align:center;color:#a58b9a;font-size:11px;padding:20px}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="logo">GLOWY</div>
+ <div class="tag">MY NEW ERA</div>
+ <h1>Your Life. Your Style. Your World.</h1>
+ <p>مساحتك الخاصة لحياة أجمل، وتنظيم أسهل، واكتشاف نفسك كل يوم.</p>
+</header>
+
+<main>
+ <div class="welcome">
+  <h2>أهلاً بيكي في عالمك الجديد ♡</h2>
+  <p>كل تفاصيل حياتك في مكان واحد. ابدئي رحلتك!</p>
+ </div>
+
+ <h2>اكتشفي عالم GLOWY</h2>
+ <div class="grid">
+  <div class="card" onclick="openSection('beauty')">
+   <div class="emoji">🧴</div><h3>Skin Care</h3><p>العناية بالبشرة</p>
+  </div>
+  <div class="card" onclick="openSection('wardrobe')">
+   <div class="emoji">👗</div><h3>My Wardrobe</h3><p>خزانة ملابسك</p>
+  </div>
+  <div class="card" onclick="openSection('style')">
+   <div class="emoji">✨</div><h3>My Style</h3><p>تنسيق إطلالاتك</p>
+  </div>
+  <div class="card" onclick="openSection('weather')">
+   <div class="emoji">☀️</div><h3>Weather Style</h3><p>إطلالتك حسب الطقس</p>
+  </div>
+  <div class="card" onclick="openSection('hair')">
+   <div class="emoji">💇🏻‍♀️</div><h3>Hair Care</h3><p>العناية بالشعر</p>
+  </div>
+  <div class="card" onclick="openSection('routine')">
+   <div class="emoji">📅</div><h3>My Routine</h3><p>تنظيم يومك</p>
+  </div>
+  <div class="card" onclick="openSection('goals')">
+   <div class="emoji">🎯</div><h3>My Goals</h3><p>أهدافك وإنجازاتك</p>
+  </div>
+  <div class="card" onclick="openSection('cycle')">
+   <div class="emoji">🌸</div><h3>Cycle Tracker</h3><p>متابعة دورتك</p>
+  </div>
+ </div>
+
+ <div id="beauty" class="section"><button class="back" onclick="home()">رجوع</button><h2>🧴 Skin Care</h2><p>مساحتك لتنظيم روتين العناية بالبشرة ومنتجاتك.</p></div>
+ <div id="wardrobe" class="section"><button class="back" onclick="home()">رجوع</button><h2>👗 My Wardrobe</h2><p>خزانة ملابسك الرقمية. قريباً: إضافة صور ملابسك وتنظيمها.</p></div>
+ <div id="style" class="section"><button class="back" onclick="home()">رجوع</button><h2>✨ My Style</h2><p>تنسيقاتك وإطلالاتك المفضلة.</p></div>
+ <div id="weather" class="section"><button class="back" onclick="home()">رجوع</button><h2>☀️ Weather Style</h2><p>اختيار إطلالات مناسبة للطقس.</p></div>
+ <div id="hair" class="section"><button class="back" onclick="home()">رجوع</button><h2>💇🏻‍♀️ Hair Care</h2><p>تنظيم روتين العناية بالشعر.</p></div>
+ <div id="routine" class="section"><button class="back" onclick="home()">رجوع</button><h2>📅 My Routine</h2><p>خططي ليومك ومواعيدك.</p></div>
+ <div id="goals" class="section"><button class="back" onclick="home()">رجوع</button><h2>🎯 My Goals</h2><p>تابعي أهدافك وإنجازاتك.</p></div>
+ <div id="cycle" class="section"><button class="back" onclick="home()">رجوع</button><h2>🌸 Cycle Tracker</h2><p>مساحة خاصة لتسجيل ومتابعة مواعيد دورتك.</p></div>
+</main>
+
+<nav>
+ <button onclick="home()">🏠 الرئيسية</button>
+ <button onclick="openSection('wardrobe')">👗 ملابسي</button>
+ <button onclick="openSection('beauty')">🧴 عنايتي</button>
+ <button onclick="openSection('routine')">📅 يومي</button>
+</nav>
+
+<footer>GLOWY ♡ YOUR NEW ERA STARTS HERE</footer>
+
+<script>
+function openSection(id){
+ document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+ document.querySelector('.grid').style.display='none';
+ document.querySelector('.welcome').style.display='none';
+ document.querySelectorAll('main>h2').forEach(h=>h.style.display='none');
+ document.getElementById(id).classList.add('active');
+ window.scrollTo(0,0);
+}
+function home(){
+ document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+ document.querySelector('.grid').style.display='grid';
+ document.querySelector('.welcome').style.display='block';
+ document.querySelectorAll('main>h2').forEach(h=>h.style.display='block');
+ window.scrollTo(0,0);
+}
+</script>
+</body>
+</html>
+
